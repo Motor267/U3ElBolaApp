@@ -60,16 +60,14 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margenes"
                 android:layout_weight="0.5"
-                android:background="@drawable/dwboton4"
-                android:text="Button" />
+                android:background="@drawable/dwboton4" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margenes"
                 android:layout_weight="0.5"
-                android:background="@drawable/boton5"
-                android:text="Button" />
+                android:background="@drawable/boton5" />
         </LinearLayout>
     </LinearLayout>
 
