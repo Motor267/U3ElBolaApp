@@ -1,5 +1,6 @@
 package mx.edu.itl.c17130848.u3elbolaapp;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,6 +9,9 @@ import android.view.View;
 import android.widget.EditText;
 
 public class LoginActivity extends AppCompatActivity {
+
+    public static final int CODIGO_USUARIO = 10;
+    public static final int CODIGO_CONTRASENA = 20;
 
     private EditText edtUsuario;
     private EditText edtContrasena;
@@ -21,6 +25,8 @@ public class LoginActivity extends AppCompatActivity {
         edtUsuario = findViewById( R.id.edtUsario );
         edtContrasena = findViewById( R.id.edtContrasena );
     }
+
+    //----------------------------------------------------------------------------------------------
 
     public void btnEntrarClick( View v ){
         String usuario = edtUsuario.getText().toString();
@@ -38,17 +44,40 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    //----------------------------------------------------------------------------------------------
+
     public void btnUsuarioClick( View v ){
         Intent intent = new Intent( this, LeerDatoActivity.class );
         //Establecemos el dato que se trasnpasara al segundo activity
         intent.putExtra( "usuario", edtUsuario.getText().toString() );
-        startActivity( intent );
+        startActivityForResult( intent, CODIGO_USUARIO );
     }
+
+    //----------------------------------------------------------------------------------------------
 
     public void btnContrasenaClick( View v ){
         Intent intent = new Intent( this, LeerDatoActivity.class );
         //Establecemos el dato que se trasnpasara al segundo activity
         intent.putExtra( "contrasena", edtContrasena.getText().toString() );
-        startActivity( intent );
+        startActivityForResult( intent, CODIGO_CONTRASENA );
     }
+
+    //----------------------------------------------------------------------------------------------
+
+    @Override
+    protected void onActivityResult( int requestCode, int resultCode, @Nullable Intent data ) {
+        super.onActivityResult( requestCode, resultCode, data );
+        // Verificar el estado del resultado devuelto por LeerDataActivity
+        if( resultCode == RESULT_OK ){
+            if ( requestCode == CODIGO_USUARIO ) {
+                edtUsuario.setText( data.getStringExtra( "data_nuevo" ) );
+            } else if ( requestCode == CODIGO_CONTRASENA ) {
+                edtContrasena.setText( data.getStringExtra("data_nuevo" ) );
+            }
+        } else if ( resultCode == RESULT_CANCELED ) {
+            // Hacer algo si se cancelo la captura del dato nuevo
+        }
+    }
+
+    //----------------------------------------------------------------------------------------------
 }
