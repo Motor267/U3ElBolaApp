@@ -1,0 +1,17 @@
+[33mcommit 9b52e80cd5217ee8da6dafe1193c1071b5fe1162[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/singleton[m[33m, [m[1;32msingleton[m[33m)[m
+Author: Angel Eduardo Soto <angel.14.98@hotmail.com>
+Date:   Fri Apr 30 11:12:44 2021 -0500
+
+    MiSingleton
+
+[33mcommit 8d55524d115afafee9b3ff1b7af2b663356abf67[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Angel Eduardo Soto <angel.14.98@hotmail.com>
+Date:   Tue Apr 27 11:02:25 2021 -0500
+
+    Botones tres puntos en LoginActivity
+
+[33mcommit 39bdd0b9ae44e86bb19b4636f42856d1fc577c80[m
+Author: Angel Eduardo Soto <angel.14.98@hotmail.com>
+Date:   Mon Apr 26 11:03:16 2021 -0500
+
+    first commit
