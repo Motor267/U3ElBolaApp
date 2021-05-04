@@ -67,7 +67,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margenes"
                 android:layout_weight="0.5"
-                android:background="@drawable/boton5" />
+                android:background="@drawable/boton5"
+                android:onClick="btnSpotifyClick" />
         </LinearLayout>
     </LinearLayout>
 

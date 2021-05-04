@@ -2,6 +2,7 @@ package mx.edu.itl.c17130848.u3elbolaapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -50,5 +51,10 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             mediaPlayer.stop();
             mediaPlayer = null;
         }
+    }
+
+    public void btnSpotifyClick( View v ) {
+        Intent intent = new Intent(this, ConciertoActivity.class );
+        startActivity( intent );
     }
 }
