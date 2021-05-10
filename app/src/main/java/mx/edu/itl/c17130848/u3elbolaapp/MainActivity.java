@@ -1,3 +1,23 @@
+/*------------------------------------------------------------------------------------------
+:*                         TECNOLOGICO NACIONAL DE MEXICO
+:*                       INSTITUTO TECNOLOGICO DE LA LAGUNA
+:*                     INGENIERIA EN SISTEMAS COMPUTACIONALES
+:*                             DESARROLLO EN ANDROID "A"
+:*
+:*                   SEMESTRE: ENE-JUN/2021    HORA: 10-11 HRS
+:*
+:*                  Activity principal de la app con un menu
+:*
+:*  Archivo     : MainActivity.java
+:*  Autor       : Angel Eduardo Soto García    17130848
+:*  Fecha       : 20/May/2021
+:*  Compilador  : Android Studio 4.1.2
+:*  Descripción : Clase que contiene un menu amigable para la reproduccion de video, cambio de
+:*                imagenes y reproduccion de audio.
+:*  Ultima modif:
+:*  Fecha       Modifición             Motivo
+:*==========================================================================================
+:*------------------------------------------------------------------------------------------*/
 package mx.edu.itl.c17130848.u3elbolaapp;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +47,8 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         setVolumeControlStream( AudioManager.STREAM_MUSIC );
     }
 
+    //----------------------------------------------------------------------------------------------
+
     @Override
     public boolean onTouch( View view, MotionEvent event ) {
         if( view.getId() == R.id.btnFiesta ) {
@@ -39,12 +61,16 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         return false;
     }
 
+    //----------------------------------------------------------------------------------------------
+
     private void reproducir_audio() {
         if( mediaPlayer == null ) {
           mediaPlayer = MediaPlayer.create( this, R.raw.tropicalisimo );
         }
         mediaPlayer.start();
     }
+
+    //----------------------------------------------------------------------------------------------
 
     private void detener_audio() {
         if( mediaPlayer != null ) {
@@ -53,8 +79,12 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         }
     }
 
+    //----------------------------------------------------------------------------------------------
+
     public void btnSpotifyClick( View v ) {
         Intent intent = new Intent(this, ConciertoActivity.class );
         startActivity( intent );
     }
+
+    //----------------------------------------------------------------------------------------------
 }

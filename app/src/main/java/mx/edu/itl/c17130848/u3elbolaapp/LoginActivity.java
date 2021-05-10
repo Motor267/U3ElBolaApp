@@ -1,3 +1,23 @@
+/*------------------------------------------------------------------------------------------
+:*                         TECNOLOGICO NACIONAL DE MEXICO
+:*                       INSTITUTO TECNOLOGICO DE LA LAGUNA
+:*                     INGENIERIA EN SISTEMAS COMPUTACIONALES
+:*                             DESARROLLO EN ANDROID "A"
+:*
+:*                   SEMESTRE: ENE-JUN/2021    HORA: 10-11 HRS
+:*
+:*                  Activity para la autenticación de la app
+:*
+:*  Archivo     : LoginActivity.java
+:*  Autor       : Angel Eduardo Soto García    17130848
+:*  Fecha       : 20/May/2021
+:*  Compilador  : Android Studio 4.1.2
+:*  Descripción : Clase para la verificación y autenticación de la aplicacion con el usuario: admin
+:*                y contraseña: android
+:*  Ultima modif:
+:*  Fecha       Modifición             Motivo
+:*==========================================================================================
+:*------------------------------------------------------------------------------------------*/
 package mx.edu.itl.c17130848.u3elbolaapp;
 
 import androidx.annotation.Nullable;
@@ -32,11 +52,11 @@ public class LoginActivity extends AppCompatActivity {
         String usuario = edtUsuario.getText().toString();
         String contrasena = edtContrasena.getText().toString();
 
-        if( usuario.equals("admin") && contrasena.equals("android") ) {
-            Intent intent = new Intent(this, MainActivity.class);
+        if( usuario.equals( "admin" ) && contrasena.equals( "android" ) ) {
+            Intent intent = new Intent(this, MainActivity.class );
             startActivity(intent);
         } else {
-            if (!usuario.equals("admin")) {
+            if (!usuario.equals( "admin" )) {
                 edtUsuario.setError( "Usuario incorrecto" );
             } else {
                 edtContrasena.setError( "Contraseña incorrecta" );
@@ -77,6 +97,13 @@ public class LoginActivity extends AppCompatActivity {
         } else if ( resultCode == RESULT_CANCELED ) {
             // Hacer algo si se cancelo la captura del dato nuevo
         }
+    }
+
+    //----------------------------------------------------------------------------------------------
+
+    public void btnAcercaDeClick( View v ){
+        Intent intent = new Intent(this, AcercaDeActivity.class);
+        startActivity(intent);
     }
 
     //----------------------------------------------------------------------------------------------

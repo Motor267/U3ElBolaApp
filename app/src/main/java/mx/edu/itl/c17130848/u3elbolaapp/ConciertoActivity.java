@@ -1,3 +1,23 @@
+/*------------------------------------------------------------------------------------------
+:*                         TECNOLOGICO NACIONAL DE MEXICO
+:*                       INSTITUTO TECNOLOGICO DE LA LAGUNA
+:*                     INGENIERIA EN SISTEMAS COMPUTACIONALES
+:*                             DESARROLLO EN ANDROID "A"
+:*
+:*                   SEMESTRE: ENE-JUN/2021    HORA: 10-11 HRS
+:*
+:*                      Activity que reproduce un video
+:*
+:*  Archivo     : ConciertoActivity.java
+:*  Autor       : Angel Eduardo Soto García    17130848
+:*  Fecha       : 20/May/2021
+:*  Compilador  : Android Studio 4.1.2
+:*  Descripción : Clase que reproduce un video con la ayuda de la clase VideoView
+:*
+:*  Ultima modif:
+:*  Fecha       Modifición             Motivo
+:*==========================================================================================
+:*------------------------------------------------------------------------------------------*/
 package mx.edu.itl.c17130848.u3elbolaapp;
 
 import androidx.appcompat.app.AppCompatActivity;
